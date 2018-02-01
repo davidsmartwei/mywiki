@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Hexo安装及部署到github | David&#39;s Wiki</title>
+    
+    
+        <meta name="keywords" content="hexo install" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="架构图: 解读:hexo—&amp;gt;相当于wordpress,是博客内容的载体或叫平台，组成文件有以下：  deploy：执行hexo deploy命令部署到GitHub上的内容目录 public：执行hexo generate命令，输出的静态网页内容目录 scaffolds：layout模板文件目录，其中的md文件可以添加编辑 scripts：扩展脚本目录，这里可以自定义一些javascript脚">
+<meta name="keywords" content="hexo install">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo安装及部署到github">
+<meta property="og:url" content="http://www.less-is-more.top/wiki/hexo安装/index.html">
+<meta property="og:site_name" content="David&#39;s Wiki">
+<meta property="og:description" content="架构图: 解读:hexo—&amp;gt;相当于wordpress,是博客内容的载体或叫平台，组成文件有以下：  deploy：执行hexo deploy命令部署到GitHub上的内容目录 public：执行hexo generate命令，输出的静态网页内容目录 scaffolds：layout模板文件目录，其中的md文件可以添加编辑 scripts：扩展脚本目录，这里可以自定义一些javascript脚">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.less-is-more.top/images/hexo架构图.png">
+<meta property="og:updated_time" content="2018-01-31T14:37:18.291Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo安装及部署到github">
+<meta name="twitter:description" content="架构图: 解读:hexo—&amp;gt;相当于wordpress,是博客内容的载体或叫平台，组成文件有以下：  deploy：执行hexo deploy命令部署到GitHub上的内容目录 public：执行hexo generate命令，输出的静态网页内容目录 scaffolds：layout模板文件目录，其中的md文件可以添加编辑 scripts：扩展脚本目录，这里可以自定义一些javascript脚">
+<meta name="twitter:image" content="http://www.less-is-more.top/images/hexo架构图.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="David&#39;s Wiki" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="../../favicon.ico" />
+    
+
+    <link rel="stylesheet" href="../../libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../libs/open-sans/styles.css">
+    <link rel="stylesheet" href="../../libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../../libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="../../libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="../../libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="../../index.html" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">David&#39;s Wiki</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="../../index.html">首页</a>
+                
+                    <a class="main-nav-link" href="../../archives">归档</a>
+                
+                    <a class="main-nav-link" href="../../categories">分类</a>
+                
+                    <a class="main-nav-link" href="../../tags">标签</a>
+                
+                    <a class="main-nav-link" href="../../about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '../../content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../../js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="../../index.html">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="../../archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="../../categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="../../tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="../../about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id='categories'>
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id='allExpand' href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree" > 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            hexo
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">Hexo安装及部署到github</a></li>  <li class="file"><a href="../MyWiki构建过程/">MyWiki构建过程</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="../hello-world/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-hexo安装" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="../../categories/hexo/">hexo</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../tags/hexo-install/">hexo install</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="">
+            <time datetime="2017-05-30T06:04:23.000Z" itemprop="datePublished">2017-05-30</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/hexo安装.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/hexo安装.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/hexo安装.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Hexo安装及部署到github
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#架构图"><span class="toc-number">1.</span> <span class="toc-text">架构图:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解读"><span class="toc-number">2.</span> <span class="toc-text">解读:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#window下安装："><span class="toc-number">3.</span> <span class="toc-text">window下安装：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备环境"><span class="toc-number">3.1.</span> <span class="toc-text">准备环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建hexo文件夹"><span class="toc-number">3.2.</span> <span class="toc-text">创建hexo文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地查看（通过搭建本地服务器server查看博客）"><span class="toc-number">3.3.</span> <span class="toc-text">本地查看（通过搭建本地服务器server查看博客）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建github并建立仓库"><span class="toc-number">3.4.</span> <span class="toc-text">创建github并建立仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成SSH密匙"><span class="toc-number">3.5.</span> <span class="toc-text">生成SSH密匙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在GitHub上添加SSH密钥"><span class="toc-number">3.6.</span> <span class="toc-text">在GitHub上添加SSH密钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重点-配置-config-yml使得连接到GitHub"><span class="toc-number">3.7.</span> <span class="toc-text">重点$配置_config.yml使得连接到GitHub</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装deploy"><span class="toc-number">3.8.</span> <span class="toc-text">安装deploy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整测试"><span class="toc-number">3.9.</span> <span class="toc-text">完整测试</span></a></li></ol></li></ol>
+                </div>
+            
+        
+        
+            <h1 id="架构图"><a href="#架构图" class="headerlink" title="架构图:"></a><strong>架构图:</strong></h1><p><img src=" /images/hexo架构图.png" align="center/"></p>
+<h1 id="解读"><a href="#解读" class="headerlink" title="解读:"></a><strong>解读:</strong></h1><p><strong><em>hexo—&gt;相当于wordpress,是博客内容的载体或叫平台，组成文件有以下：</em></strong></p>
+<ol>
+<li>deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
+<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，<br>404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。</li>
+<li>_drafts：草稿文章</li>
+<li>_posts：发布文章</li>
+<li>themes：主题文件目录</li>
+<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
+</ol>
+<p><strong><em>github—&gt;它就是一个服务器，专门存放生成的静态文件</em></strong></p>
+<p><strong><em>命令：hexo generate—&gt;把用户资源文件转化为静态HTML文件</em></strong></p>
+<p><strong><em>命令：hexo deploy—&gt;把静态HTML文件发送到GitHub服务器的仓库中（repository）</em></strong></p>
+<p>外网如何访问GitHub中的静态HTML文件：1.github仓库命名规则，github账号名.github.io  例如我的仓库为davidsmartwei.github.io，为什么这么命名呢，因为你可以通过在浏览器里输入 <a href="https://davidsmartwei.github.io/" target="_blank" rel="noopener">https://davidsmartwei.github.io/</a> 找到存放在github服务器上的静态HTML文件，通过里面的文件进而生成博客界面。</p>
+<hr>
+<h1 id="window下安装："><a href="#window下安装：" class="headerlink" title="window下安装："></a><strong>window下安装：</strong></h1><h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><p>安装Git</p>
+<p>安装Node.js</p>
+<p>安装hexo</p>
+<p>任意位置点击鼠标右键，选择Git bash,输入npm命令<br>npm install -g hexo</p>
+<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><ol>
+<li>新建一个喜爱的文件夹（如D:\hexo），在D:\hexo内点击鼠标右键，选择Git bash（作用是切换git bash工作目录到D:\hexo），输入以下命令自动在该文件夹建立网站所需要的所有文件<br>hexo init</li>
+<li>安装依赖包<br>npm install</li>
+</ol>
+<h2 id="本地查看（通过搭建本地服务器server查看博客）"><a href="#本地查看（通过搭建本地服务器server查看博客）" class="headerlink" title="本地查看（通过搭建本地服务器server查看博客）"></a>本地查看（通过搭建本地服务器server查看博客）</h2><ol>
+<li>安装server<br>npm install hexo -server -save</li>
+<li>生成静态HMTL文件及发送到本地服务器<br>hexo generate<br>hexo server</li>
+<li>在浏览器中输入localhost:4000即可预览到博客，但是目前外网是访问不了博客，因为该博客只存放在本地，要想通过外网访问，需要把静态HMTL文件发送到github服务器上，如上解读所示。</li>
+</ol>
+<h2 id="创建github并建立仓库"><a href="#创建github并建立仓库" class="headerlink" title="创建github并建立仓库"></a>创建github并建立仓库</h2><p>仓库命名规则：github账号名.github.io<br>eg:davidsmartwei.github.io<br>%%本地与github建立数据传输联系需要ssh密匙</p>
+<h2 id="生成SSH密匙"><a href="#生成SSH密匙" class="headerlink" title="生成SSH密匙"></a>生成SSH密匙</h2><p>ssh-keygen -t rsa -C “你的邮箱地址”，按3个回车，密码为空<br>邮箱地址为你在注册github时绑定的邮箱</p>
+<h2 id="在GitHub上添加SSH密钥"><a href="#在GitHub上添加SSH密钥" class="headerlink" title="在GitHub上添加SSH密钥"></a>在GitHub上添加SSH密钥</h2><p>在本地找到有步骤5生成的两个文件id_rsa（私匙）和id_rsa.pub（公匙），打开id_rsa.pub并复制里面的全部内容到GitHub上。settings—&gt;SSH and GPG keys—&gt;New SSH key</p>
+<h2 id="重点-配置-config-yml使得连接到GitHub"><a href="#重点-配置-config-yml使得连接到GitHub" class="headerlink" title="重点$配置_config.yml使得连接到GitHub"></a>重点$配置_config.yml使得连接到GitHub</h2><p>打开_config.yml，翻到最下面，改成我这样子的，注意： : 后面要有空格</p>
+<p>deploy:<br>type: git<br>repository: git@github.com:davidsmartwei/davidsmartwei.github.io.git<br>branch: master</p>
+<p>其中把davidsmartwei改为你的GitHub账号名</p>
+<h2 id="安装deploy"><a href="#安装deploy" class="headerlink" title="安装deploy"></a>安装deploy</h2><p>npm install hexo-deployer-git -save</p>
+<h2 id="完整测试"><a href="#完整测试" class="headerlink" title="完整测试"></a>完整测试</h2><p>hexo clean<br>hexo generate<br>hexo deploy<br>如出现以下提示，则说明部署成功<br>[info] Deploy done: git<br>现在就可以通过外网在浏览器里输入 <a href="https://davidsmartwei.github.io" target="_blank" rel="noopener">https://davidsmartwei.github.io</a> 访问博客</p>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="../hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Hello World
+                
+            </div>
+        </a>
+    
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            David Smith &copy; 2018 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten">wikitten</a>
+        </div>
+    </div>
+</footer>
+        
+
+    
+        <script src="../../libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="../../libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="../../libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="../../js/main.js"></script>
+
+    </div>
+</body>
+</html>

@@ -18,7 +18,7 @@
 <meta property="og:description" content="初衷：知识积累：维基百科，google书签，印象笔记，知乎，简书，灵感等知识整理：建立个人wiki知识管理系统，分类和整理零碎知识个人见解：博客，表达自己的感悟及理解 Wiki安装：主题安装：wikitten选择wiki知识管理系统wikitten优点：  双栏 界面简洁 有纵深，侧边可展开显条目标题 支持Markdown书写 全文搜素 可添加文章  安装hexo主题hexo-theme-Wiki">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.less-is-more.top/images/aliyun.png">
-<meta property="og:updated_time" content="2018-02-01T15:37:52.661Z">
+<meta property="og:updated_time" content="2018-02-01T15:46:54.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MyWiki构建过程">
 <meta name="twitter:description" content="初衷：知识积累：维基百科，google书签，印象笔记，知乎，简书，灵感等知识整理：建立个人wiki知识管理系统，分类和整理零碎知识个人见解：博客，表达自己的感悟及理解 Wiki安装：主题安装：wikitten选择wiki知识管理系统wikitten优点：  双栏 界面简洁 有纵深，侧边可展开显条目标题 支持Markdown书写 全文搜素 可添加文章  安装hexo主题hexo-theme-Wiki">
@@ -80,7 +80,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -99,9 +99,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Articles',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Catégories',
+            CATEGORIES: 'Categories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -133,7 +133,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -150,7 +150,7 @@
         
     <div class="widget-wrap" id='categories'>
         <h3 class="widget-title">
-            <span>Catégories</span>
+            <span>categories</span>
             &nbsp;
             <a id='allExpand' href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -330,11 +330,11 @@
 </ul>
 <h2 id="为了绑定域名与Github-page"><a href="#为了绑定域名与Github-page" class="headerlink" title="为了绑定域名与Github page"></a>为了绑定域名与Github page</h2><p>在阿里云里购买一个域名，域名解析如下图<br><img src="/images/aliyun.png" width="50%" height="50%" align="center/"></p>
 <h2 id="为了Github绑定域名"><a href="#为了Github绑定域名" class="headerlink" title="为了Github绑定域名"></a>为了Github绑定域名</h2><p>在自己网站项目repo的根目录添加CNAME<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">www.less-is-more.top</span><br></pre></td></tr></table></figure></p>
-<p><strong>tip</strong>:如果是直接在GitHub网页上添加文件的话，会遇到一个问题就是在通过hexo g -d之后hexo会把根目录下的CNAME文件删除。所以要把CNAME文件添加到/source目录下，这样hexo g -d之后hexo会自动把CNAME复制到/puclic目录下然后将/public路径下的内容进行复制并push到远程master分支的根目录下</p>
+<p><strong>tip</strong>: 如果是直接在GitHub网页上添加文件的话，会遇到一个问题就是在通过hexo g -d之后hexo会把根目录下的CNAME文件删除。所以要把CNAME文件添加到/source目录下，这样hexo g -d之后hexo会自动把CNAME复制到/puclic目录下然后将/public路径下的内容进行复制并push到远程master分支的根目录下</p>
 <h1 id="sublime-text可视化编辑"><a href="#sublime-text可视化编辑" class="headerlink" title="sublime text可视化编辑"></a>sublime text可视化编辑</h1><h2 id="Sublime安装LiveReload插件"><a href="#Sublime安装LiveReload插件" class="headerlink" title="Sublime安装LiveReload插件"></a>Sublime安装LiveReload插件</h2><p>1.打开<a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">Package Control官网</a><br>2.复制代码到sublime中运行<br>3.按住shift+ctrl+p -&gt; Package Control:Install Package -&gt; enter</p>
 <h3 id="配置：-3"><a href="#配置：-3" class="headerlink" title="配置："></a>配置：</h3><p><strong>方法1</strong>：过用户自定义配置来开启<br>Preferences &gt; Package Settings &gt; LiveReload &gt; Settings User<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;enabled_plugins&quot;: [&quot;SimpleReloadPlugin&quot;,&quot;SimpleRefresh&quot;]&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>方法2</strong>：通过控制台命令来开启<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. Ctrl+Shift+P</span><br><span class="line"></span><br><span class="line">2. LiveReload: Enable/disableplugins</span><br><span class="line"></span><br><span class="line">3. Enable - Simple Reload</span><br></pre></td></tr></table></figure></p>
-<h2 id="Chrome浏览器安装LiveReload插件"><a href="#Chrome浏览器安装LiveReload插件" class="headerlink" title="Chrome浏览器安装LiveReload插件"></a>Chrome浏览器安装LiveReload插件</h2><p><em>tip</em>:接着右键单击选择管理扩展程序，把允许访问网址文件这一选项勾选上</p>
+<h2 id="Chrome浏览器安装LiveReload插件"><a href="#Chrome浏览器安装LiveReload插件" class="headerlink" title="Chrome浏览器安装LiveReload插件"></a>Chrome浏览器安装LiveReload插件</h2><p><strong>tip</strong>: 接着右键单击选择管理扩展程序，把允许访问网址文件这一选项勾选上</p>
 <h1 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h1><h2 id="站内链接："><a href="#站内链接：" class="headerlink" title="站内链接："></a>站内链接：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// /2015/01/16/hello-world/</span><br><span class="line">&#123;% post_path hello-world %&#125;</span><br><span class="line"></span><br><span class="line">// &lt;a href=&quot;/2015/01/16/hello-world/&quot;&gt;Hello World&lt;/a&gt;</span><br><span class="line">&#123;% post_link hello-world %&#125;</span><br><span class="line"></span><br><span class="line">// &lt;a href=&quot;/2015/01/16/hello-world/&quot;&gt;Custom Title&lt;/a&gt;</span><br><span class="line">&#123;% post_link hello-world Custom Title %&#125;</span><br></pre></td></tr></table></figure>
 <p><em>eg</em>:<br><a href="/wiki/hexo安装/" title="Hexo安装及部署到github">Hexo安装及部署到github</a><br><a href="/wiki/hexo安装/" title="Hexo安装及部署">Hexo安装及部署</a></p>
 <h2 id="为了页面内跳转-锚点"><a href="#为了页面内跳转-锚点" class="headerlink" title="为了页面内跳转(锚点)"></a>为了页面内跳转(锚点)</h2><p><em>eg</em>:<br><a href="#插件安装：">top to 插件安装</a></p>
@@ -366,7 +366,7 @@
     
     
         <a href="../hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Plus ancien</strong>
+            <strong class="article-nav-caption">Older</strong>
             <div class="article-nav-title">Hello World</div>
         </a>
     

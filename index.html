@@ -169,6 +169,15 @@
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder"></i>
                             &nbsp;
+                            js
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/禁止博客复制及右键功能/">禁止博客复制及右键功能</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
                             刷机
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/redmi-4A刷刷机/">redmi 4A刷机</a></li>  </ul> 
@@ -245,6 +254,106 @@
 </aside>
             
             <section id="main">
+        <article id="post-禁止博客复制及右键功能" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="categories/js/">js</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="tags/js/">js</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="wiki/禁止博客复制及右键功能/">
+            <time datetime="2018-02-02T14:06:13.000Z" itemprop="datePublished">2018-02-02</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/禁止博客复制及右键功能.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/禁止博客复制及右键功能.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/禁止博客复制及右键功能.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="wiki/禁止博客复制及右键功能/">禁止博客复制及右键功能</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>保护自己的文章不被摘抄采集，略微防止技术小白/小牛</p>
+<h1 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h1><h2 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h2><p>在body中加入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body oncontextmenu=&quot;return false&quot; onselectstart=&quot;return false&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="破解："><a href="#破解：" class="headerlink" title="破解："></a>破解：</h3><p>在浏览器页面打开控制台（F12），console中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.body.oncontextmenu=&quot;return true&quot;;</span><br><span class="line">document.body.onselectstart=&quot;return true&quot;;</span><br></pre></td></tr></table></figure></p>
+<h2 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h2><p>插入script脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--禁止复制--&gt; &lt;script type=&quot;text/Javascript&quot;&gt; document.onselectstart=function(e)&#123;return false;&#125;; &lt;/script&gt;</span><br><span class="line">&lt;!--禁止复制--&gt; &lt;script type=&quot;text/Javascript&quot;&gt; document.onselectstart=function(e)&#123;return false;&#125;; &lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="破解原理："><a href="#破解原理：" class="headerlink" title="破解原理："></a>破解原理：</h1><p>进入控制台，打开网页的source,搜索<strong>oncontextmenu和onselectstart</strong>，把它从false变为true.</p>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="wiki/禁止博客复制及右键功能/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-redmi-4A刷刷机" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -261,7 +370,7 @@
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="tags/redmi4A/">-redmi4A</a>
+        <a class="tag-link" href="tags/redmi4A/">redmi4A</a>
     </div>
 
                         

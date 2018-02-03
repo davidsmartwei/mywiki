@@ -9,18 +9,18 @@
         <meta name="keywords" content="js" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt; 破解：在浏览器页面打开控制台（F12">
+    <meta name="description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="禁止博客复制及右键功能">
 <meta property="og:url" content="http://www.less-is-more.top/wiki/禁止博客复制及右键功能/index.html">
 <meta property="og:site_name" content="David&#39;s Wiki">
-<meta property="og:description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt; 破解：在浏览器页面打开控制台（F12">
+<meta property="og:description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-02T15:06:01.119Z">
+<meta property="og:updated_time" content="2018-02-03T13:56:19.416Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="禁止博客复制及右键功能">
-<meta name="twitter:description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt; 破解：在浏览器页面打开控制台（F12">
+<meta name="twitter:description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
     
 
     
@@ -328,6 +328,7 @@
         
             <h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>保护自己的文章不被摘抄采集，略微防止技术小白/小牛</p>
 <h1 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h1><h2 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h2><p>在body中加入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body oncontextmenu=&quot;return false&quot; onselectstart=&quot;return false&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h3 id="破解："><a href="#破解：" class="headerlink" title="破解："></a>破解：</h3><p>在浏览器页面打开控制台（F12），console中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.body.oncontextmenu=&quot;return true&quot;;</span><br><span class="line">document.body.onselectstart=&quot;return true&quot;;</span><br></pre></td></tr></table></figure></p>
 <h2 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h2><p>插入script脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--禁止复制--&gt; &lt;script type=&quot;text/Javascript&quot;&gt; document.onselectstart=function(e)&#123;return false;&#125;; &lt;/script&gt;</span><br><span class="line">&lt;!--禁止复制--&gt; &lt;script type=&quot;text/Javascript&quot;&gt; document.onselectstart=function(e)&#123;return false;&#125;; &lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
 <h1 id="破解原理："><a href="#破解原理：" class="headerlink" title="破解原理："></a>破解原理：</h1><p>进入控制台，打开网页的source,搜索<strong>oncontextmenu和onselectstart</strong>，把它从false变为true.</p>

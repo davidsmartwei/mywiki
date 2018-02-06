@@ -9,19 +9,20 @@
         <meta name="keywords" content="文件层次系统" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="参考资料  [文件系统层次结构标准 ](https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86) [linux系统目录详解（全而易懂） ](http://blog.51cto.com/ctohf/907442)">
+    <meta name="description" content="初衷：为了搞明白linux,实现自己的构想。 组成：linux操作系统：内核+系统调用内核：操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件 系统调用接口:提供一整组开发接口用于应用程序开发  根目录 /：用途：根文件系统的内容必须足以启动、还原、恢复和/或修复系统   要启动系统，根分区上必须存在足以挂载其他分">
 <meta name="keywords" content="文件层次系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="根目录说明">
 <meta property="og:url" content="http://www.less-is-more.top/wiki/linux/FHS/根目录说明/index.html">
 <meta property="og:site_name" content="David&#39;s Wiki">
-<meta property="og:description" content="参考资料  [文件系统层次结构标准 ](https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86) [linux系统目录详解（全而易懂） ](http://blog.51cto.com/ctohf/907442)">
+<meta property="og:description" content="初衷：为了搞明白linux,实现自己的构想。 组成：linux操作系统：内核+系统调用内核：操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件 系统调用接口:提供一整组开发接口用于应用程序开发  根目录 /：用途：根文件系统的内容必须足以启动、还原、恢复和/或修复系统   要启动系统，根分区上必须存在足以挂载其他分">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.less-is-more.top/images/fhs2.png">
-<meta property="og:updated_time" content="2018-02-06T08:46:06.533Z">
+<meta property="og:image" content="http://www.less-is-more.top/images/os.gif">
+<meta property="og:updated_time" content="2018-02-06T16:41:50.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="根目录说明">
-<meta name="twitter:description" content="参考资料  [文件系统层次结构标准 ](https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86) [linux系统目录详解（全而易懂） ](http://blog.51cto.com/ctohf/907442)">
+<meta name="twitter:description" content="初衷：为了搞明白linux,实现自己的构想。 组成：linux操作系统：内核+系统调用内核：操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件 系统调用接口:提供一整组开发接口用于应用程序开发  根目录 /：用途：根文件系统的内容必须足以启动、还原、恢复和/或修复系统   要启动系统，根分区上必须存在足以挂载其他分">
 <meta name="twitter:image" content="http://www.less-is-more.top/images/fhs2.png">
     
 
@@ -175,7 +176,7 @@
                             &nbsp;
                             hexo
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../hexo/hexo安装/">Hexo安装及部署到github</a></li>  <li class="file"><a href="../../../hexo/MyWiki构建过程/">MyWiki构建过程</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../hexo/MyWiki构建过程/">MyWiki构建过程</a></li>  <li class="file"><a href="../../../hexo/hexo安装/">Hexo安装及部署到github</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory open">
@@ -341,13 +342,98 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">1.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷："><span class="toc-number">1.</span> <span class="toc-text">初衷：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组成："><span class="toc-number">2.</span> <span class="toc-text">组成：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux操作系统：内核-系统调用"><span class="toc-number">2.1.</span> <span class="toc-text">linux操作系统：内核+系统调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内核："><span class="toc-number">2.1.1.</span> <span class="toc-text">内核：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#系统调用接口"><span class="toc-number">2.1.2.</span> <span class="toc-text">系统调用接口:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根目录-："><span class="toc-number">2.2.</span> <span class="toc-text">根目录 /：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途："><span class="toc-number">2.2.1.</span> <span class="toc-text">用途：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#要求："><span class="toc-number">2.2.2.</span> <span class="toc-text">要求：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#补充："><span class="toc-number">2.2.3.</span> <span class="toc-text">补充：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#详细文档：文件系统层次结构中文翻译版"><span class="toc-number">2.2.4.</span> <span class="toc-text">详细文档：文件系统层次结构中文翻译版</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">3.</span> <span class="toc-text">参考资料</span></a></li></ol>
                 </div>
             
         
         
-            <p><img src="/images/fhs2.png" alt="fhs2"></p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+            <p><img src="/images/fhs2.png" alt=""></p>
+<h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>为了搞明白linux,实现自己的构想。</p>
+<h1 id="组成："><a href="#组成：" class="headerlink" title="组成："></a>组成：</h1><h2 id="linux操作系统：内核-系统调用"><a href="#linux操作系统：内核-系统调用" class="headerlink" title="linux操作系统：内核+系统调用"></a>linux操作系统：内核+系统调用</h2><h3 id="内核："><a href="#内核：" class="headerlink" title="内核："></a>内核：</h3><p>操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件</p>
+<h3 id="系统调用接口"><a href="#系统调用接口" class="headerlink" title="系统调用接口:"></a>系统调用接口:</h3><p>提供一整组开发接口用于应用程序开发</p>
+<p><img src="/images/os.gif" alt=""></p>
+<h2 id="根目录-："><a href="#根目录-：" class="headerlink" title="根目录 /："></a>根目录 /：</h2><h3 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h3><p>根文件系统的内容必须足以启动、还原、恢复和/或修复系统 </p>
+<ul>
+<li>要启动系统，根分区上必须存在足以挂载其他分区的内容。这包括工具、配置、引导装载程序信息和其他启动必需的数据。 /usr 、 /opt 和 /var 的设计使得它们可以位于其他的分区或文件系统 </li>
+<li>要能够恢复和/或修复系统，一位有经验的维护者诊断和重建损坏系统所需要的工具必须放置在根文件系统中 </li>
+<li>要还原系统，从系统备份(软盘、磁带等等)还原的工具必须放置在根文件系统中 </li>
+</ul>
+<h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><p>/ 文件夹下要求有如下文件夹或符号链接 </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">文件夹</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bin</td>
+<td style="text-align:center">必需命令的二进制文件</td>
+</tr>
+<tr>
+<td style="text-align:center">boot</td>
+<td style="text-align:center">引导加载程序的静态文件</td>
+</tr>
+<tr>
+<td style="text-align:center">dev</td>
+<td style="text-align:center">设备文件</td>
+</tr>
+<tr>
+<td style="text-align:center">etc</td>
+<td style="text-align:center">主机特定的系统配置</td>
+</tr>
+<tr>
+<td style="text-align:center">lib</td>
+<td style="text-align:center">必需的共享库和内核模块</td>
+</tr>
+<tr>
+<td style="text-align:center">media</td>
+<td style="text-align:center">可移动媒质的挂载点</td>
+</tr>
+<tr>
+<td style="text-align:center">mnt</td>
+<td style="text-align:center">临时挂载一个文件系统用的挂载点</td>
+</tr>
+<tr>
+<td style="text-align:center">opt</td>
+<td style="text-align:center">外部应用程序软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">sbin</td>
+<td style="text-align:center">必需的系统级二进制文件</td>
+</tr>
+<tr>
+<td style="text-align:center">srv</td>
+<td style="text-align:center">本系统所提供服务的数据文件</td>
+</tr>
+<tr>
+<td style="text-align:center">tmp</td>
+<td style="text-align:center">临时文件</td>
+</tr>
+<tr>
+<td style="text-align:center">usr</td>
+<td style="text-align:center">二级层次结构</td>
+</tr>
+<tr>
+<td style="text-align:center">var</td>
+<td style="text-align:center">变量数据</td>
+</tr>
+<tr>
+<td style="text-align:center">home</td>
+<td style="text-align:center">用户主文件夹（可选）</td>
+</tr>
+<tr>
+<td style="text-align:center">root</td>
+<td style="text-align:center">root用户的主文件夹(可选)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h3><ul>
+<li>让根系统系统尽量小 </li>
+<li>应用程序任何时候都不能创建或要求在根文件夹下保存特殊文件或子文件夹 </li>
+</ul>
+<h3 id="详细文档：文件系统层次结构中文翻译版"><a href="#详细文档：文件系统层次结构中文翻译版" class="headerlink" title="详细文档：文件系统层次结构中文翻译版"></a>详细文档：<a href="https://wylmer.gitbooks.io/filesystem-hierarchy-standard/content/" target="_blank" rel="noopener">文件系统层次结构中文翻译版</a></h3><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
 <ul>
 <li>[文件系统层次结构标准</li>
 <li>](<a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86</a>)</li>
@@ -361,7 +447,7 @@
 <li>](<a href="https://www.zhihu.com/question/21265424" target="_blank" rel="noopener">https://www.zhihu.com/question/21265424</a>)</li>
 <li>[Unix目录结构的来历</li>
 <li>](<a href="http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.html</a>)</li>
-<li><a href=""></a></li>
+<li><a href="http://cn.linux.vbird.org/linux_basic/0105computers_4.php" target="_blank" rel="noopener"><a href="http://cn.linux.vbird.org/linux_basic/0105computers.php" target="_blank" rel="noopener">鸟哥的linux私房菜</a></a></li>
 </ul>
 </blockquote>
 

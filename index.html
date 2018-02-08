@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -95,9 +95,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Articles',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
+            CATEGORIES: 'Catégories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -129,7 +129,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
     </div>
 
                 </td>
@@ -146,7 +146,7 @@
         
     <div class="widget-wrap" id='categories'>
         <h3 class="widget-title">
-            <span>categories</span>
+            <span>Catégories</span>
             &nbsp;
             <a id='allExpand' href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -188,6 +188,15 @@
                             FHS
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/linux/FHS/根目录说明/">根目录说明</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            个性化配置
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/linux/个性化配置/shell/">shell</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -281,6 +290,106 @@
 </aside>
             
             <section id="main">
+        <article id="post-linux/个性化配置/shell" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="categories/linux/个性化配置/">个性化配置</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="tags/fish/">fish</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="wiki/linux/个性化配置/shell/">
+            <time datetime="2018-02-07T18:03:11.000Z" itemprop="datePublished">2018-02-08</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/linux/个性化配置/shell.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/linux/个性化配置/shell.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/linux/个性化配置/shell.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="wiki/linux/个性化配置/shell/">shell</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>为了简单方便的使用shell,以及方便记住众多linux命令</p>
+<h1 id="组成："><a href="#组成：" class="headerlink" title="组成："></a>组成：</h1><h2 id="安装fish"><a href="#安装fish" class="headerlink" title="安装fish:"></a>安装fish:</h2><p>Fish 是”the friendly interactive shell”的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fish</span><br></pre></td></tr></table></figure>
+<h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fish</span><br></pre></td></tr></table></figure>
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><h4 id="彩色显示："><a href="#彩色显示：" class="headerlink" title="彩色显示："></a>彩色显示：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 无效命令为红色</span><br><span class="line">$ mkd</span><br><span class="line"></span><br><span class="line"># 有效命令为蓝色</span><br><span class="line">$ mkdir</span><br></pre></td></tr></table></figure>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="wiki/linux/个性化配置/shell/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-linux/FHS/根目录说明" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         

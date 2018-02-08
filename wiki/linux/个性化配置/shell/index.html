@@ -3,27 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>根目录说明 | David&#39;s Wiki</title>
+    <title>shell | David&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="文件层次系统" />
+        <meta name="keywords" content="fish" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="初衷：为了搞明白linux,实现自己的构想。 组成：linux操作系统：内核+系统调用内核：操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件 系统调用接口:提供一整组开发接口用于应用程序开发  根目录 /：用途：根文件系统的内容必须足以启动、还原、恢复和/或修复系统   要启动系统，根分区上必须存在足以挂载其他分">
-<meta name="keywords" content="文件层次系统">
+    <meta name="description" content="初衷：为了简单方便的使用shell,以及方便记住众多linux命令 组成：安装fish:Fish 是”the friendly interactive shell”的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。 1sudo apt-get install fish 启动：1fish 功能：彩色显示：12345# 无效命令为红色$ mkd">
+<meta name="keywords" content="fish">
 <meta property="og:type" content="article">
-<meta property="og:title" content="根目录说明">
-<meta property="og:url" content="http://www.less-is-more.top/wiki/linux/FHS/根目录说明/index.html">
+<meta property="og:title" content="shell">
+<meta property="og:url" content="http://www.less-is-more.top/wiki/linux/个性化配置/shell/index.html">
 <meta property="og:site_name" content="David&#39;s Wiki">
-<meta property="og:description" content="初衷：为了搞明白linux,实现自己的构想。 组成：linux操作系统：内核+系统调用内核：操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件 系统调用接口:提供一整组开发接口用于应用程序开发  根目录 /：用途：根文件系统的内容必须足以启动、还原、恢复和/或修复系统   要启动系统，根分区上必须存在足以挂载其他分">
+<meta property="og:description" content="初衷：为了简单方便的使用shell,以及方便记住众多linux命令 组成：安装fish:Fish 是”the friendly interactive shell”的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。 1sudo apt-get install fish 启动：1fish 功能：彩色显示：12345# 无效命令为红色$ mkd">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.less-is-more.top/images/fhs2.png">
-<meta property="og:image" content="http://www.less-is-more.top/images/os.gif">
-<meta property="og:updated_time" content="2018-02-06T16:41:50.797Z">
+<meta property="og:updated_time" content="2018-02-08T06:13:52.467Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="根目录说明">
-<meta name="twitter:description" content="初衷：为了搞明白linux,实现自己的构想。 组成：linux操作系统：内核+系统调用内核：操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件 系统调用接口:提供一整组开发接口用于应用程序开发  根目录 /：用途：根文件系统的内容必须足以启动、还原、恢复和/或修复系统   要启动系统，根分区上必须存在足以挂载其他分">
-<meta name="twitter:image" content="http://www.less-is-more.top/images/fhs2.png">
+<meta name="twitter:title" content="shell">
+<meta name="twitter:description" content="初衷：为了简单方便的使用shell,以及方便记住众多linux命令 组成：安装fish:Fish 是”the friendly interactive shell”的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。 1sudo apt-get install fish 启动：1fish 功能：彩色显示：12345# 无效命令为红色$ mkd">
     
 
     
@@ -186,22 +183,22 @@
                             linux
                         </a>
                          <ul class="unstyled" id="tree" > 
-                    <li class="directory open">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
-                            &nbsp;
-                            FHS
-                        </a>
-                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">根目录说明</a></li>  </ul> 
-                    </li> 
-                    
                     <li class="directory">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder"></i>
                             &nbsp;
+                            FHS
+                        </a>
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../FHS/根目录说明/">根目录说明</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
                             个性化配置
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../个性化配置/shell/">shell</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">shell</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -294,7 +291,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-linux/FHS/根目录说明" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-linux/个性化配置/shell" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -304,33 +301,33 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="../../../../categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="../../../../categories/linux/FHS/">FHS</a>
+        <a class="article-category-link" href="../../../../categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="../../../../categories/linux/个性化配置/">个性化配置</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="../../../../tags/文件层次系统/">文件层次系统</a>
+        <a class="tag-link" href="../../../../tags/fish/">fish</a>
     </div>
 
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="">
-            <time datetime="2018-02-06T07:29:11.000Z" itemprop="datePublished">2018-02-06</time>
+            <time datetime="2018-02-07T18:03:11.000Z" itemprop="datePublished">2018-02-08</time>
         </a>
     </div>
 
 
                         
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/linux/FHS/根目录说明.md'> Source </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/linux/个性化配置/shell.md'> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/linux/FHS/根目录说明.md'> Edit </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/linux/个性化配置/shell.md'> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/linux/FHS/根目录说明.md'> History </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/linux/个性化配置/shell.md'> History </a>
                             </div>
                         
                     </div>
@@ -338,7 +335,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            根目录说明
+            shell
         </h1>
     
 
@@ -351,112 +348,32 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷："><span class="toc-number">1.</span> <span class="toc-text">初衷：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组成："><span class="toc-number">2.</span> <span class="toc-text">组成：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux操作系统：内核-系统调用"><span class="toc-number">2.1.</span> <span class="toc-text">linux操作系统：内核+系统调用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内核："><span class="toc-number">2.1.1.</span> <span class="toc-text">内核：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#系统调用接口"><span class="toc-number">2.1.2.</span> <span class="toc-text">系统调用接口:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根目录-："><span class="toc-number">2.2.</span> <span class="toc-text">根目录 /：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途："><span class="toc-number">2.2.1.</span> <span class="toc-text">用途：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#要求："><span class="toc-number">2.2.2.</span> <span class="toc-text">要求：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#补充："><span class="toc-number">2.2.3.</span> <span class="toc-text">补充：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#详细文档：文件系统层次结构中文翻译版"><span class="toc-number">2.2.4.</span> <span class="toc-text">详细文档：文件系统层次结构中文翻译版</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">3.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷："><span class="toc-number">1.</span> <span class="toc-text">初衷：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组成："><span class="toc-number">2.</span> <span class="toc-text">组成：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装fish"><span class="toc-number">2.1.</span> <span class="toc-text">安装fish:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动："><span class="toc-number">2.1.1.</span> <span class="toc-text">启动：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能："><span class="toc-number">2.1.2.</span> <span class="toc-text">功能：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#彩色显示："><span class="toc-number">2.1.2.1.</span> <span class="toc-text">彩色显示：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有效路径会有下划线"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">有效路径会有下划线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自动建议："><span class="toc-number">2.1.2.3.</span> <span class="toc-text">自动建议：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自动补全"><span class="toc-number">2.1.2.4.</span> <span class="toc-text">自动补全:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令配置："><span class="toc-number">2.2.</span> <span class="toc-text">常用命令配置：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">3.</span> <span class="toc-text">参考资料</span></a></li></ol>
                 </div>
             
         
         
-            <p><img src="/images/fhs2.png" alt=""></p>
-<h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>为了搞明白linux,实现自己的构想。</p>
-<h1 id="组成："><a href="#组成：" class="headerlink" title="组成："></a>组成：</h1><h2 id="linux操作系统：内核-系统调用"><a href="#linux操作系统：内核-系统调用" class="headerlink" title="linux操作系统：内核+系统调用"></a>linux操作系统：内核+系统调用</h2><h3 id="内核："><a href="#内核：" class="headerlink" title="内核："></a>内核：</h3><p>操作系统(Operating System, OS)其实也是一组程序，这组程序的重点在于管理计算机的所有活动以及驱动系统中的所有硬件</p>
-<h3 id="系统调用接口"><a href="#系统调用接口" class="headerlink" title="系统调用接口:"></a>系统调用接口:</h3><p>提供一整组开发接口用于应用程序开发</p>
-<p><img src="/images/os.gif" alt=""></p>
-<h2 id="根目录-："><a href="#根目录-：" class="headerlink" title="根目录 /："></a>根目录 /：</h2><h3 id="用途："><a href="#用途：" class="headerlink" title="用途："></a>用途：</h3><p>根文件系统的内容必须足以启动、还原、恢复和/或修复系统 </p>
+            <h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>为了简单方便的使用shell,以及方便记住众多linux命令</p>
+<h1 id="组成："><a href="#组成：" class="headerlink" title="组成："></a>组成：</h1><h2 id="安装fish"><a href="#安装fish" class="headerlink" title="安装fish:"></a>安装fish:</h2><p>Fish 是”the friendly interactive shell”的简称，最大特点就是方便易用。很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fish</span><br></pre></td></tr></table></figure>
+<h3 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fish</span><br></pre></td></tr></table></figure>
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><h4 id="彩色显示："><a href="#彩色显示：" class="headerlink" title="彩色显示："></a>彩色显示：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 无效命令为红色</span><br><span class="line">$ mkd</span><br><span class="line"></span><br><span class="line"># 有效命令为蓝色</span><br><span class="line">$ mkdir</span><br></pre></td></tr></table></figure>
+<h4 id="有效路径会有下划线"><a href="#有效路径会有下划线" class="headerlink" title="有效路径会有下划线"></a>有效路径会有下划线</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/somefi</span><br></pre></td></tr></table></figure>
+<h4 id="自动建议："><a href="#自动建议：" class="headerlink" title="自动建议："></a>自动建议：</h4><p>Fish 会自动在光标后面给出建议，表示可能的选项，颜色为灰色。</p>
+<p>如果采纳建议，可以按下<code>→</code>或<code>Control + F</code>。如果只采纳一部分，可以按下<code>Alt + →</code></p>
+<h4 id="自动补全"><a href="#自动补全" class="headerlink" title="自动补全:"></a>自动补全:</h4><p>输入命令时，Fish 会自动显示匹配的上一条历史记录</p>
+<p>如果没有匹配的历史记录，Fish 会猜测可能的结果，自动补全各种输入。比如，输入<code>pyt</code>再按下<code>Tab</code>，就会自动补全为<code>python</code>命令。如果有多个可能的结果，Fish 会把它们都列出，还带有简要介绍.</p>
+<h2 id="常用命令配置："><a href="#常用命令配置：" class="headerlink" title="常用命令配置："></a>常用命令配置：</h2><p>1.在/root目录下创建一个文件，例如：sample</p>
+<p>2.把所有常用的命令保存在sample中</p>
+<p>3.打开/root/.bashrc，加入别名：alias sample=’(cd ~ &amp;&amp; cat sample |grep ‘</p>
+<p>4.当想查找某个命令时，直接输入：sample 命令名)</p>
+<p>5.时常把自己常用命令扩充到sample中</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
 <ul>
-<li>要启动系统，根分区上必须存在足以挂载其他分区的内容。这包括工具、配置、引导装载程序信息和其他启动必需的数据。 /usr 、 /opt 和 /var 的设计使得它们可以位于其他的分区或文件系统 </li>
-<li>要能够恢复和/或修复系统，一位有经验的维护者诊断和重建损坏系统所需要的工具必须放置在根文件系统中 </li>
-<li>要还原系统，从系统备份(软盘、磁带等等)还原的工具必须放置在根文件系统中 </li>
-</ul>
-<h3 id="要求："><a href="#要求：" class="headerlink" title="要求："></a>要求：</h3><p>/ 文件夹下要求有如下文件夹或符号链接 </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">文件夹</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">bin</td>
-<td style="text-align:center">必需命令的二进制文件</td>
-</tr>
-<tr>
-<td style="text-align:center">boot</td>
-<td style="text-align:center">引导加载程序的静态文件</td>
-</tr>
-<tr>
-<td style="text-align:center">dev</td>
-<td style="text-align:center">设备文件</td>
-</tr>
-<tr>
-<td style="text-align:center">etc</td>
-<td style="text-align:center">主机特定的系统配置</td>
-</tr>
-<tr>
-<td style="text-align:center">lib</td>
-<td style="text-align:center">必需的共享库和内核模块</td>
-</tr>
-<tr>
-<td style="text-align:center">media</td>
-<td style="text-align:center">可移动媒质的挂载点</td>
-</tr>
-<tr>
-<td style="text-align:center">mnt</td>
-<td style="text-align:center">临时挂载一个文件系统用的挂载点</td>
-</tr>
-<tr>
-<td style="text-align:center">opt</td>
-<td style="text-align:center">外部应用程序软件包</td>
-</tr>
-<tr>
-<td style="text-align:center">sbin</td>
-<td style="text-align:center">必需的系统级二进制文件</td>
-</tr>
-<tr>
-<td style="text-align:center">srv</td>
-<td style="text-align:center">本系统所提供服务的数据文件</td>
-</tr>
-<tr>
-<td style="text-align:center">tmp</td>
-<td style="text-align:center">临时文件</td>
-</tr>
-<tr>
-<td style="text-align:center">usr</td>
-<td style="text-align:center">二级层次结构</td>
-</tr>
-<tr>
-<td style="text-align:center">var</td>
-<td style="text-align:center">变量数据</td>
-</tr>
-<tr>
-<td style="text-align:center">home</td>
-<td style="text-align:center">用户主文件夹（可选）</td>
-</tr>
-<tr>
-<td style="text-align:center">root</td>
-<td style="text-align:center">root用户的主文件夹(可选)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h3><ul>
-<li>让根系统系统尽量小 </li>
-<li>应用程序任何时候都不能创建或要求在根文件夹下保存特殊文件或子文件夹 </li>
-</ul>
-<h3 id="详细文档：文件系统层次结构中文翻译版"><a href="#详细文档：文件系统层次结构中文翻译版" class="headerlink" title="详细文档：文件系统层次结构中文翻译版"></a>详细文档：<a href="https://wylmer.gitbooks.io/filesystem-hierarchy-standard/content/" target="_blank" rel="noopener">文件系统层次结构中文翻译版</a></h3><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
-<ul>
-<li>[文件系统层次结构标准</li>
-<li>](<a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E6%A0%87%E5%87%86</a>)</li>
-<li>[linux系统目录详解（全而易懂）</li>
-<li>](<a href="http://blog.51cto.com/ctohf/907442" target="_blank" rel="noopener">http://blog.51cto.com/ctohf/907442</a>)</li>
-<li>[Linux目录结构</li>
-<li>](<a href="http://linux-wiki.cn/wiki/zh-hans/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84" target="_blank" rel="noopener">http://linux-wiki.cn/wiki/zh-hans/Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84</a>)</li>
-<li>[Linux 下各个目录的作用及内容</li>
-<li>](<a href="https://cnbin.github.io/blog/2015/06/23/linux-xia-ge-ge-mu-lu-de-zuo-yong-ji-nei-rong/" target="_blank" rel="noopener">https://cnbin.github.io/blog/2015/06/23/linux-xia-ge-ge-mu-lu-de-zuo-yong-ji-nei-rong/</a>)</li>
-<li>[Linux文件系统中/bin、/sbin、/usr/bin、/usr/sbin、/usr/local/bin、/usr/local/sbin文件夹的区别是什么？</li>
-<li>](<a href="https://www.zhihu.com/question/21265424" target="_blank" rel="noopener">https://www.zhihu.com/question/21265424</a>)</li>
-<li>[Unix目录结构的来历</li>
-<li>](<a href="http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2012/02/a_history_of_unix_directory_structure.html</a>)</li>
-<li><a href="http://cn.linux.vbird.org/linux_basic/0105computers_4.php" target="_blank" rel="noopener"><a href="http://cn.linux.vbird.org/linux_basic/0105computers.php" target="_blank" rel="noopener">鸟哥的linux私房菜</a></a></li>
+<li>[Fish shell 入门教程</li>
+<li>](<a href="http://www.ruanyifeng.com/blog/2017/05/fish_shell.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2017/05/fish_shell.html</a>)</li>
+<li>[50个最常用的Unix/Linux命令</li>
+<li>](<a href="https://gywbd.github.io/posts/2014/8/50-linux-commands.html#whereis" target="_blank" rel="noopener">https://gywbd.github.io/posts/2014/8/50-linux-commands.html#whereis</a>)</li>
 </ul>
 </blockquote>
 
@@ -471,19 +388,10 @@
     
 <nav id="article-nav">
     
-        <a href="../../个性化配置/shell/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Plus récent</strong>
-            <div class="article-nav-title">
-                
-                    shell
-                
-            </div>
-        </a>
     
-    
-        <a href="../../../电影下载/百度云满宽带下载/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="../../FHS/根目录说明/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Plus ancien</strong>
-            <div class="article-nav-title">百度云满宽带下载</div>
+            <div class="article-nav-title">根目录说明</div>
         </a>
     
 </nav>

@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.less-is-more.top/wiki/%E6%A8%AA%E7%9C%8B%E5%BD%93%E5%89%8D/hexo/MyWiki%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B/</loc>
+    
+    <lastmod>2018-04-11T08:45:53.733Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.less-is-more.top/wiki/%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/</loc>
     
-    <lastmod>2018-04-11T02:39:10.014Z</lastmod>
+    <lastmod>2018-04-11T08:23:23.867Z</lastmod>
     
   </url>
   
@@ -51,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://www.less-is-more.top/wiki/%E6%A8%AA%E7%9C%8B%E5%BD%93%E5%89%8D/hexo/MyWiki%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B/</loc>
-    
-    <lastmod>2018-02-05T15:39:48.233Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.less-is-more.top/wiki/%E6%A8%AA%E7%9C%8B%E5%BD%93%E5%89%8D/hexo/hexo%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2018-02-05T15:39:33.543Z</lastmod>
@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://www.less-is-more.top/wiki/%E4%B8%BA%E6%88%91%E6%89%80%E7%94%A8/hello-world/</loc>
+    <loc>http://www.less-is-more.top/wiki/%E7%BA%B5%E8%A7%82%E5%8F%A4%E4%BB%8A/hello-world/</loc>
     
     <lastmod>2018-02-01T15:35:51.308Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.less-is-more.top/wiki/%E7%BA%B5%E8%A7%82%E5%8F%A4%E4%BB%8A/hello-world/</loc>
+    <loc>http://www.less-is-more.top/wiki/%E4%B8%BA%E6%88%91%E6%89%80%E7%94%A8/hello-world/</loc>
     
     <lastmod>2018-02-01T15:35:51.308Z</lastmod>
     

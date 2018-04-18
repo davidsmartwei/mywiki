@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="David&#39;s Wiki">
 <meta property="og:description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-18T09:36:34.368Z">
+<meta property="og:updated_time" content="2018-04-18T09:42:32.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="启动流程">
 <meta name="twitter:description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
@@ -372,7 +372,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷"><span class="toc-number">1.</span> <span class="toc-text">初衷</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BIOS"><span class="toc-number">1.1.</span> <span class="toc-text">BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boot-Loader"><span class="toc-number">1.2.</span> <span class="toc-text">Boot Loader</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-2"><span class="toc-number">1.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">1.2.3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MBR"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">MBR</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-3"><span class="toc-number">1.2.3.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式"><span class="toc-number">1.2.3.1.2.</span> <span class="toc-text">结构形式</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#分区表"><span class="toc-number">1.2.3.1.2.1.</span> <span class="toc-text">分区表</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#硬盘启动"><span class="toc-number">1.2.3.1.2.2.</span> <span class="toc-text">硬盘启动</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.3.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内核"><span class="toc-number">1.4.</span> <span class="toc-text">内核</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-2"><span class="toc-number">1.4.1.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化进程"><span class="toc-number">1.5.</span> <span class="toc-text">初始化进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-4"><span class="toc-number">1.5.1.</span> <span class="toc-text">初衷</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷"><span class="toc-number">1.</span> <span class="toc-text">初衷</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BIOS"><span class="toc-number">1.1.</span> <span class="toc-text">BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boot-Loader"><span class="toc-number">1.2.</span> <span class="toc-text">Boot Loader</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-2"><span class="toc-number">1.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">1.2.3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MBR"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">MBR</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-3"><span class="toc-number">1.2.3.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式"><span class="toc-number">1.2.3.1.2.</span> <span class="toc-text">结构形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分区表"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">分区表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-4"><span class="toc-number">1.2.3.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式-1"><span class="toc-number">1.2.3.2.2.</span> <span class="toc-text">结构形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#硬盘启动"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">硬盘启动</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.3.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内核"><span class="toc-number">1.4.</span> <span class="toc-text">内核</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-2"><span class="toc-number">1.4.1.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化进程"><span class="toc-number">1.5.</span> <span class="toc-text">初始化进程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-5"><span class="toc-number">1.5.1.</span> <span class="toc-text">初衷</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
                 </div>
             
         
@@ -401,10 +401,8 @@
 <li>第447-510字节：分区表（Partition table）</li>
 <li>第511-512字节：主引导记录签名（0x55和0xAA),表示这个设备可以启动，如果没有，控制权按照“启动顺序”交给下一个设备</li>
 </ol>
-<h6 id="分区表"><a href="#分区表" class="headerlink" title="分区表"></a>分区表</h6><p>####### 初衷</p>
-<p>硬盘可以分区，指定操作系统安装在哪个分区</p>
-<p>####### 结构形式</p>
-<p>分区表的长度只有64个字节，里面又分成四项，每项16个字节。所以，一个硬盘最多只能分四个一级分区，又叫做”主分区”。</p>
+<h4 id="分区表"><a href="#分区表" class="headerlink" title="分区表"></a>分区表</h4><h5 id="初衷-4"><a href="#初衷-4" class="headerlink" title="初衷"></a>初衷</h5><p>硬盘可以分区，指定操作系统安装在哪个分区</p>
+<h5 id="结构形式-1"><a href="#结构形式-1" class="headerlink" title="结构形式"></a>结构形式</h5><p>分区表的长度只有64个字节，里面又分成四项，每项16个字节。所以，一个硬盘最多只能分四个一级分区，又叫做”主分区”。</p>
 <p>每个主分区的16个字节，由6个部分组成：</p>
 <ol>
 <li>第1个字节：如果为0x80，就表示该主分区是激活分区，控制权要转交给这个分区。四个主分区里面只能有一个是激活的。</li>
@@ -416,7 +414,7 @@
 </ol>
 <p>注：最后的四个字节（”主分区的扇区总数”），决定了这个主分区的长度。也就是说，一个主分区的扇区总数最多不超过2的32次方。</p>
 <p>如果每个扇区为512个字节，就意味着单个分区最大不超过2TB。再考虑到扇区的逻辑地址也是32位，所以单个硬盘可利用的空间最大也不超过2TB。如果想使用更大的硬盘，只有2个方法：一是提高每个扇区的字节数，二是增加扇区总数</p>
-<h6 id="硬盘启动"><a href="#硬盘启动" class="headerlink" title="硬盘启动"></a>硬盘启动</h6><p>控制权转交给硬盘的某个分区</p>
+<h4 id="硬盘启动"><a href="#硬盘启动" class="headerlink" title="硬盘启动"></a>硬盘启动</h4><p>控制权转交给硬盘的某个分区</p>
 <ul>
 <li><p><strong>卷引导记录(VBR)</strong>,作用是告诉计算机，操作系统在这个分区里的位置，四个主分区里面，只有一个是激活的。计算机会读取激活分区的第一个扇区.</p>
 </li>
@@ -434,7 +432,7 @@
 <li>动态加载核心模块，通常这些模块是U盘, RAID, LVM, SCSI 等文件系统与磁碟介面的驱动程序等，放置在 /lib/modules/ 目录内</li>
 </ol>
 <h2 id="初始化进程"><a href="#初始化进程" class="headerlink" title="初始化进程"></a>初始化进程</h2><p>开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程。</p>
-<h3 id="初衷-4"><a href="#初衷-4" class="headerlink" title="初衷"></a>初衷</h3><p>准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等</p>
+<h3 id="初衷-5"><a href="#初衷-5" class="headerlink" title="初衷"></a>初衷</h3><p>准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等</p>
 <h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
 <ul>
 <li><a href="http://cn.linux.vbird.org/linux_basic/0510osloader_1.php" target="_blank" rel="noopener">鸟哥的linux私房菜</a></li>

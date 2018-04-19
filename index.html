@@ -78,7 +78,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -97,10 +97,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -131,7 +131,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -148,7 +148,7 @@
         
     <div class="widget-wrap" id='categories'>
         <h3 class="widget-title">
-            <span>Categorias</span>
+            <span>categories</span>
             &nbsp;
             <a id='allExpand' href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -236,7 +236,7 @@
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/横看当前/电影下载/百度云满宽带下载/">百度云满宽带下载</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="wiki/横看当前/Git学习笔记/">Git学习笔记</a></li>  <li class="file"><a href="wiki/横看当前/windows-office激活/">windows-office激活</a></li>  </ul> 
+                     <li class="file"><a href="wiki/横看当前/Git学习笔记/">Git学习笔记</a></li>  <li class="file"><a href="wiki/横看当前/启动流程/">启动流程</a></li>  <li class="file"><a href="wiki/横看当前/windows-office激活/">windows-office激活</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -245,9 +245,9 @@
                             &nbsp;
                             纵观古今
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/纵观古今/boot-计算机/">boot(计算机)</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="wiki/纵观古今/boot-计算机/">boot(计算机)</a></li>  <li class="file"><a href="wiki/纵观古今/初始化进程/">初始化进程</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="wiki/启动流程/">启动流程</a></li>  </ul> 
+                     </ul> 
     </div>
     <script>
         $(document).ready(function() {
@@ -319,6 +319,106 @@
 </aside>
             
             <section id="main">
+        <article id="post-纵观古今/初始化进程" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="categories/纵观古今/">纵观古今</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="tags/systemd/">systemd</a>, <a class="tag-link" href="tags/sysvinit/">sysvinit</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="wiki/纵观古今/初始化进程/">
+            <time datetime="2018-04-18T23:31:11.000Z" itemprop="datePublished">2018-04-19</time>
+        </a>
+    </div>
+
+
+                        
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/纵观古今/初始化进程.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/纵观古今/初始化进程.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/纵观古今/初始化进程.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="wiki/纵观古今/初始化进程/">初始化进程</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h1 id="sysvinit"><a href="#sysvinit" class="headerlink" title="sysvinit"></a>sysvinit</h1><p>内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程</p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>所有的init配置都在/etc/inittab文件当中</p>
+<h3 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a>运行级别</h3><h4 id="初衷-1"><a href="#初衷-1" class="headerlink" title="初衷"></a>初衷</h4><p>操作系统启动时根据”运行级别”，确定要运行哪些程序及服务。依据有无网络与有无 X Window 而将 run level 分为 7 个等级</p>
+<ul>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="wiki/纵观古今/初始化进程/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-纵观古今/boot-计算机" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -419,7 +519,7 @@
 
 
     
-        <article id="post-启动流程" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-横看当前/启动流程" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -427,6 +527,11 @@
                 
                     <div class="article-meta">
                         
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="categories/横看当前/">横看当前</a>
+    </div>
+
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
@@ -436,7 +541,7 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="wiki/启动流程/">
+        <a href="wiki/横看当前/启动流程/">
             <time datetime="2018-04-11T02:39:09.000Z" itemprop="datePublished">2018-04-11</time>
         </a>
     </div>
@@ -444,13 +549,13 @@
 
                         
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/启动流程.md'> Source </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/横看当前/启动流程.md'> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/启动流程.md'> Edit </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/横看当前/启动流程.md'> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/启动流程.md'> History </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/横看当前/启动流程.md'> History </a>
                             </div>
                         
                     </div>
@@ -458,7 +563,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="wiki/启动流程/">启动流程</a>
+            <a class="article-title" href="wiki/横看当前/启动流程/">启动流程</a>
         </h1>
     
 
@@ -500,7 +605,7 @@
         
             </div>   
             <div class="article-more-link">
-                <a href="wiki/启动流程/#more">Read More</a>
+                <a href="wiki/横看当前/启动流程/#more">Read More</a>
             </div>
         
         <footer class="article-footer">
@@ -1135,108 +1240,8 @@
 
 
     
-        <article id="post-横看当前/刷机/redmi-4A刷刷机" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="categories/横看当前/">横看当前</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="categories/横看当前/刷机/">刷机</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="tags/redmi4A/">redmi4A</a>
-    </div>
-
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="wiki/横看当前/刷机/redmi-4A刷刷机/">
-            <time datetime="2018-02-02T04:37:27.000Z" itemprop="datePublished">2018-02-02</time>
-        </a>
-    </div>
-
-
-                        
-                            <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/横看当前/刷机/redmi-4A刷刷机.md'> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/横看当前/刷机/redmi-4A刷刷机.md'> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/横看当前/刷机/redmi-4A刷刷机.md'> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="wiki/横看当前/刷机/redmi-4A刷刷机/">redmi 4A刷机</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p><h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>对自带系统不满，垃圾广告太多，许多系统自带应用不需要却无法删除,无法获得最高权限。刷机可以更好的使用Google</p>
-<h1 id="刷机方式"><a href="#刷机方式" class="headerlink" title="刷机方式"></a>刷机方式</h1><h2 id="卡刷："><a href="#卡刷：" class="headerlink" title="卡刷："></a>卡刷：</h2><ul>
-<li>手动导入安装包</li>
-<li>刷入twrp模式：adb</li>
-<li>recovery模式： 小米助手(只能刷官方rom)</li>
-<p>
-                
-            
-        
-        
-            </div>   
-            <div class="article-more-link">
-                <a href="wiki/横看当前/刷机/redmi-4A刷刷机/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
         <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="extend next" rel="next" href="page/2/">Siguiente  &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="extend next" rel="next" href="page/2/">Next &raquo;</a>
         </nav>
     
 </section>

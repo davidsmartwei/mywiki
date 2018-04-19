@@ -17,12 +17,12 @@
 <meta property="og:site_name" content="David&#39;s Wiki">
 <meta property="og:description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.less-is-more.top/0510osloader-flow.jpg">
-<meta property="og:updated_time" content="2018-04-19T01:05:03.954Z">
+<meta property="og:image" content="http://www.less-is-more.top/images/0510osloader-flow.jpg">
+<meta property="og:updated_time" content="2018-04-19T02:24:53.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="启动流程">
 <meta name="twitter:description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
-<meta name="twitter:image" content="http://www.less-is-more.top/0510osloader-flow.jpg">
+<meta name="twitter:image" content="http://www.less-is-more.top/images/0510osloader-flow.jpg">
     
 
     
@@ -82,7 +82,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -101,10 +101,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Entradas',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -135,7 +135,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
     </div>
 
                 </td>
@@ -152,7 +152,7 @@
         
     <div class="widget-wrap" id='categories'>
         <h3 class="widget-title">
-            <span>categories</span>
+            <span>Categorias</span>
             &nbsp;
             <a id='allExpand' href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -193,7 +193,7 @@
                             &nbsp;
                             hexo
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../hexo/hexo安装/">Hexo安装及部署到github</a></li>  <li class="file"><a href="../../hexo/MyWiki构建过程/">MyWiki构建过程</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../hexo/MyWiki构建过程/">MyWiki构建过程</a></li>  <li class="file"><a href="../../hexo/hexo安装/">Hexo安装及部署到github</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory open">
@@ -251,7 +251,7 @@
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="../../../纵观古今/boot-计算机/">boot(计算机)</a></li>  <li class="file"><a href="../../../纵观古今/初始化进程/">初始化进程</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="../../../启动流程/">启动流程</a></li>  </ul> 
+                     </ul> 
     </div>
     <script>
         $(document).ready(function() {
@@ -378,7 +378,7 @@
         
             
                 <div id="toc" class="toc-article">
-                <strong class="toc-title">Catalogue</strong>
+                <strong class="toc-title">Catálogo</strong>
                     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷"><span class="toc-number">1.</span> <span class="toc-text">初衷</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BIOS"><span class="toc-number">1.1.</span> <span class="toc-text">BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boot-Loader"><span class="toc-number">1.2.</span> <span class="toc-text">Boot Loader</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-2"><span class="toc-number">1.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">1.2.3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MBR"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">MBR</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-3"><span class="toc-number">1.2.3.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式"><span class="toc-number">1.2.3.1.2.</span> <span class="toc-text">结构形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分区表"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">分区表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-4"><span class="toc-number">1.2.3.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式-1"><span class="toc-number">1.2.3.2.2.</span> <span class="toc-text">结构形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#硬盘启动"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">硬盘启动</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">1.2.4.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内核"><span class="toc-number">1.3.</span> <span class="toc-text">内核</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化进程"><span class="toc-number">1.4.</span> <span class="toc-text">初始化进程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
                 </div>
             
@@ -435,12 +435,13 @@
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1.先装windows再装linux</p>
 <h2 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h2><p>存放在/boot/vmlinuz</p>
 <p>BIOS 与 boot loader 及核心加载流程示意图</p>
-<p><img src="/0510osloader-flow.jpg" alt="BIOS 与 boot loader 及核心加载流程示意图"></p>
+<p><img src="/images/0510osloader-flow.jpg" alt="BIOS 与 boot loader 及核心加载流程示意图"></p>
 <h3 id="功能-2"><a href="#功能-2" class="headerlink" title="功能"></a>功能</h3><ol>
 <li>内核被加载到内存当中，测试并驱动各个周边设备，包括储存装置、CPU、网络卡、声卡等等。</li>
 <li>动态加载核心模块，通常这些模块是U盘, RAID, LVM, SCSI 等文件系统与磁碟介面的驱动程序等，放置在 /lib/modules/ 目录内</li>
 </ol>
-<h2 id="初始化进程"><a href="#初始化进程" class="headerlink" title="初始化进程"></a>初始化进程</h2><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<h2 id="初始化进程"><a href="#初始化进程" class="headerlink" title="初始化进程"></a>初始化进程</h2><p>参见：<a href="">初始化进程</a></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
 <ul>
 <li><a href="http://cn.linux.vbird.org/linux_basic/0510osloader_1.php" target="_blank" rel="noopener">鸟哥的linux私房菜</a></li>
 <li><a href="http://www.ruanyifeng.com/blog/2013/02/booting.html" target="_blank" rel="noopener">计算机是如何启动的</a></li>
@@ -459,18 +460,18 @@
     
 <nav id="article-nav">
     
-        <a href="../../../启动流程/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
+        <a href="../../../纵观古今/boot-计算机/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
             <div class="article-nav-title">
                 
-                    启动流程
+                    boot(计算机)
                 
             </div>
         </a>
     
     
         <a href="../../../为我所用/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
+            <strong class="article-nav-caption">Más viejo</strong>
             <div class="article-nav-title">Hello World</div>
         </a>
     

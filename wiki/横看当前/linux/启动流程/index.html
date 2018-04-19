@@ -3,24 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>禁止博客复制及右键功能 | David&#39;s Wiki</title>
+    <title>启动流程 | David&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="js" />
+        <meta name="keywords" content="linux" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
-<meta name="keywords" content="js">
+    <meta name="description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="禁止博客复制及右键功能">
-<meta property="og:url" content="http://www.less-is-more.top/wiki/横看当前/JS/禁止博客复制及右键功能/index.html">
+<meta property="og:title" content="启动流程">
+<meta property="og:url" content="http://www.less-is-more.top/wiki/横看当前/linux/启动流程/index.html">
 <meta property="og:site_name" content="David&#39;s Wiki">
-<meta property="og:description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
+<meta property="og:description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-11T14:28:08.687Z">
+<meta property="og:image" content="http://www.less-is-more.top/0510osloader-flow.jpg">
+<meta property="og:updated_time" content="2018-04-19T01:05:03.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="禁止博客复制及右键功能">
-<meta name="twitter:description" content="初衷：保护自己的文章不被摘抄采集，略微防止技术小白/小牛 操作：方法1：在body中加入以下代码1234&amp;lt;/head&amp;gt;&amp;lt;body oncontextmenu=&amp;quot;return false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;">
+<meta name="twitter:title" content="启动流程">
+<meta name="twitter:description" content="初衷为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误 BIOS基本输入输出系统(Basic Input/Output System) 初衷指定启动装置 功能 BIOS自我测试 侦测硬件并初始化 定义可启动装置的顺序  Boot Loader启动管理程序 初衷认识操作系统的文件格式并据以加载核心到主内存中去运行 功能 提供菜单：使用者可以选择不同的启动项">
+<meta name="twitter:image" content="http://www.less-is-more.top/0510osloader-flow.jpg">
     
 
     
@@ -176,13 +178,13 @@
                             横看当前
                         </a>
                          <ul class="unstyled" id="tree" > 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             JS
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">禁止博客复制及右键功能</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../JS/禁止博客复制及右键功能/">禁止博客复制及右键功能</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -194,9 +196,9 @@
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="../../hexo/hexo安装/">Hexo安装及部署到github</a></li>  <li class="file"><a href="../../hexo/MyWiki构建过程/">MyWiki构建过程</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             linux
                         </a>
@@ -207,7 +209,7 @@
                             &nbsp;
                             FHS
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../linux/FHS/根目录说明/">根目录说明</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../FHS/根目录说明/">根目录说明</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -216,9 +218,9 @@
                             &nbsp;
                             个性化配置
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../linux/个性化配置/shell/">shell</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../个性化配置/shell/">shell</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="../../linux/启动流程/">启动流程</a></li>  </ul> 
+                     <li class="file active"><a href="">启动流程</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -320,7 +322,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-横看当前/JS/禁止博客复制及右键功能" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-横看当前/linux/启动流程" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -330,33 +332,33 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="../../../../categories/横看当前/">横看当前</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="../../../../categories/横看当前/JS/">JS</a>
+        <a class="article-category-link" href="../../../../categories/横看当前/">横看当前</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="../../../../categories/横看当前/linux/">linux</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="../../../../tags/js/">js</a>
+        <a class="tag-link" href="../../../../tags/linux/">linux</a>
     </div>
 
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="">
-            <time datetime="2018-02-02T14:06:13.000Z" itemprop="datePublished">2018-02-02</time>
+            <time datetime="2018-04-11T02:39:09.000Z" itemprop="datePublished">2018-04-11</time>
         </a>
     </div>
 
 
                         
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/横看当前/JS/禁止博客复制及右键功能.md'> Source </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/raw/writing/source/_posts/横看当前/linux/启动流程.md'> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/横看当前/JS/禁止博客复制及右键功能.md'> Edit </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/edit/writing/source/_posts/横看当前/linux/启动流程.md'> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/横看当前/JS/禁止博客复制及右键功能.md'> History </a>
+                                <a href='https://github.com/davidsmithwei/mywiki/commits/writing/source/_posts/横看当前/linux/启动流程.md'> History </a>
                             </div>
                         
                     </div>
@@ -364,7 +366,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            禁止博客复制及右键功能
+            启动流程
         </h1>
     
 
@@ -377,22 +379,72 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷："><span class="toc-number">1.</span> <span class="toc-text">初衷：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#操作："><span class="toc-number">2.</span> <span class="toc-text">操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法1："><span class="toc-number">2.1.</span> <span class="toc-text">方法1：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#破解："><span class="toc-number">2.1.1.</span> <span class="toc-text">破解：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法2："><span class="toc-number">2.2.</span> <span class="toc-text">方法2：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#破解原理："><span class="toc-number">3.</span> <span class="toc-text">破解原理：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法3："><span class="toc-number">3.1.</span> <span class="toc-text">方法3：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初衷"><span class="toc-number">1.</span> <span class="toc-text">初衷</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BIOS"><span class="toc-number">1.1.</span> <span class="toc-text">BIOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boot-Loader"><span class="toc-number">1.2.</span> <span class="toc-text">Boot Loader</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初衷-2"><span class="toc-number">1.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">1.2.3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MBR"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">MBR</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-3"><span class="toc-number">1.2.3.1.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式"><span class="toc-number">1.2.3.1.2.</span> <span class="toc-text">结构形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分区表"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">分区表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#初衷-4"><span class="toc-number">1.2.3.2.1.</span> <span class="toc-text">初衷</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结构形式-1"><span class="toc-number">1.2.3.2.2.</span> <span class="toc-text">结构形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#硬盘启动"><span class="toc-number">1.2.3.3.</span> <span class="toc-text">硬盘启动</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">1.2.4.</span> <span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内核"><span class="toc-number">1.3.</span> <span class="toc-text">内核</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化进程"><span class="toc-number">1.4.</span> <span class="toc-text">初始化进程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">2.</span> <span class="toc-text">参考资料</span></a></li></ol>
                 </div>
             
         
         
-            <h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><p>保护自己的文章不被摘抄采集，略微防止技术小白/小牛</p>
-<h1 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h1><h2 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h2><p>在body中加入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body oncontextmenu=&quot;return false&quot; onselectstart=&quot;return false&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h3 id="破解："><a href="#破解：" class="headerlink" title="破解："></a>破解：</h3><p>在浏览器页面打开控制台（F12），console中输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.body.oncontextmenu=&quot;return true&quot;;</span><br><span class="line">document.body.onselectstart=&quot;return true&quot;;</span><br></pre></td></tr></table></figure></p>
-<h2 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h2><p>插入script脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--禁止复制--&gt; &lt;script type=&quot;text/Javascript&quot;&gt; document.onselectstart=function(e)&#123;return false;&#125;; &lt;/script&gt;</span><br><span class="line">&lt;!--禁止复制--&gt; &lt;script type=&quot;text/Javascript&quot;&gt; document.onselectstart=function(e)&#123;return false;&#125;; &lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<h1 id="破解原理："><a href="#破解原理：" class="headerlink" title="破解原理："></a>破解原理：</h1><p>进入控制台，打开网页的source,搜索<strong>oncontextmenu和onselectstart</strong>，把它从false变为true.</p>
-<h2 id="方法3："><a href="#方法3：" class="headerlink" title="方法3："></a>方法3：</h2><p>强力推荐安装chrome插件Enable Copy，让你欲罢不能。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+            <h1 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>为了了解从点击开机按钮到登陆页面，电脑内部都发生了什么，以便系统出问题时及时找到根源，纠正错误</p>
+<h2 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h2><p>基本输入输出系统(Basic Input/Output System)</p>
+<h3 id="初衷-1"><a href="#初衷-1" class="headerlink" title="初衷"></a>初衷</h3><p>指定启动装置</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ul>
+<li>BIOS自我测试</li>
+<li>侦测硬件并初始化</li>
+<li>定义可启动装置的顺序</li>
+</ul>
+<h2 id="Boot-Loader"><a href="#Boot-Loader" class="headerlink" title="Boot Loader"></a>Boot Loader</h2><p>启动管理程序</p>
+<h3 id="初衷-2"><a href="#初衷-2" class="headerlink" title="初衷"></a>初衷</h3><p>认识操作系统的文件格式并据以加载核心到主内存中去运行</p>
+<h3 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h3><ul>
+<li><strong>提供菜单</strong>：使用者可以选择不同的启动项目，这也是多重启动的重要功能</li>
+<li><strong>加载核心文件</strong>：直接指向可启动的程序区段来开始操作系统；</li>
+<li><strong>转交其他 loader</strong>：将启动管理功能转交给其他 loader 负责。</li>
+<li><strong>加载initrd到内存</strong>：加载虚拟文件系统 (Initial RAM Disk)到内存中，解压缩文件/boot/initrd并且在内存当中模拟成一个根目录，用于启动U盘, RAID, LVM, SCSI 等文件系统与磁碟介面的驱动程序等核心模块，IDE磁盘不需要initrd.</li>
+</ul>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="MBR"><a href="#MBR" class="headerlink" title="MBR"></a>MBR</h4><p>装置的第一扇区MBR：主引导记录(Master boot record)</p>
+<h5 id="初衷-3"><a href="#初衷-3" class="headerlink" title="初衷"></a>初衷</h5><p>告诉计算机到硬盘的哪一个位置去找操作系统</p>
+<h5 id="结构形式"><a href="#结构形式" class="headerlink" title="结构形式"></a>结构形式</h5><p>“主引导记录”只有512个字节，由三个部分组成</p>
+<ol>
+<li>第1-446字节：调用操作系统的机器码</li>
+<li>第447-510字节：分区表（Partition table）</li>
+<li>第511-512字节：主引导记录签名（0x55和0xAA),表示这个设备可以启动，如果没有，控制权按照“启动顺序”交给下一个设备</li>
+</ol>
+<h4 id="分区表"><a href="#分区表" class="headerlink" title="分区表"></a>分区表</h4><h5 id="初衷-4"><a href="#初衷-4" class="headerlink" title="初衷"></a>初衷</h5><p>硬盘可以分区，指定操作系统安装在哪个分区</p>
+<h5 id="结构形式-1"><a href="#结构形式-1" class="headerlink" title="结构形式"></a>结构形式</h5><p>分区表的长度只有64个字节，里面又分成四项，每项16个字节。所以，一个硬盘最多只能分四个一级分区，又叫做”主分区”。</p>
+<p>每个主分区的16个字节，由6个部分组成：</p>
+<ol>
+<li>第1个字节：如果为0x80，就表示该主分区是激活分区，控制权要转交给这个分区。四个主分区里面只能有一个是激活的。</li>
+<li>第2-4个字节：主分区第一个扇区的物理位置（柱面、磁头、扇区号等等）</li>
+<li>第5个字节：主分区类型</li>
+<li>第6-8个字节：主分区最后一个扇区的物理位置。</li>
+<li>第9-12字节：该主分区第一个扇区的逻辑地址</li>
+<li>第13-16字节：主分区的扇区总数</li>
+</ol>
+<p>注：最后的四个字节（”主分区的扇区总数”），决定了这个主分区的长度。也就是说，一个主分区的扇区总数最多不超过2的32次方。</p>
+<p>如果每个扇区为512个字节，就意味着单个分区最大不超过2TB。再考虑到扇区的逻辑地址也是32位，所以单个硬盘可利用的空间最大也不超过2TB。如果想使用更大的硬盘，只有2个方法：一是提高每个扇区的字节数，二是增加扇区总数</p>
+<h4 id="硬盘启动"><a href="#硬盘启动" class="headerlink" title="硬盘启动"></a>硬盘启动</h4><p>控制权转交给硬盘的某个分区</p>
 <ul>
-<li><a href="http://blog.csdn.net/qq_21859119/article/details/78775155" target="_blank" rel="noopener">开发网站为“禁止复制”“禁用右键功能”(易被破解)</a></li>
-<li><a href="http://qimok.cn/604.html" target="_blank" rel="noopener">document.body.oncontextmenu=”return true”;<br>document.body.onselectstart=”return true”;</a></li>
+<li><p><strong>卷引导记录(VBR)</strong>,作用是告诉计算机，操作系统在这个分区里的位置，四个主分区里面，只有一个是激活的。计算机会读取激活分区的第一个扇区.</p>
+</li>
+<li><p><strong>扩展分区和逻辑分区</strong>，随着硬盘越来越大，四个主分区已经不够了，需要更多的分区。但是，分区表只有四项，因此规定有且仅有一个区可以被定义成”扩展分区”（Extended partition）。</p>
+<p>所谓”扩展分区”，就是指这个区里面又分成多个区。这种分区里面的分区，就叫做”逻辑分区”（logical partition）。计算机先读取扩展分区的第一个扇区，叫做”扩展引导记录”（Extended boot record，缩写为EBR）。它里面也包含一张64字节的分区表，但是最多只有两项（也就是两个逻辑分区）。</p>
+<p>计算机接着读取第二个逻辑分区的第一个扇区，再从里面的分区表中找到第三个逻辑分区的位置，以此类推，直到某个逻辑分区的分区表只包含它自身为止（即只有一个分区项）。因此，扩展分区可以包含无数个逻辑分区。但是，似乎很少通过这种方式启动操作系统。如果操作系统确实安装在扩展分区，一般采用下一种方式启动。</p>
+</li>
+<li><p><strong>启动管理器(boot loader)</strong>,由用户选择启动哪一个操作系统,Linux环境中，目前最流行的启动管理器是Grub</p>
+</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>1.先装windows再装linux</p>
+<h2 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h2><p>存放在/boot/vmlinuz</p>
+<p>BIOS 与 boot loader 及核心加载流程示意图</p>
+<p><img src="/0510osloader-flow.jpg" alt="BIOS 与 boot loader 及核心加载流程示意图"></p>
+<h3 id="功能-2"><a href="#功能-2" class="headerlink" title="功能"></a>功能</h3><ol>
+<li>内核被加载到内存当中，测试并驱动各个周边设备，包括储存装置、CPU、网络卡、声卡等等。</li>
+<li>动态加载核心模块，通常这些模块是U盘, RAID, LVM, SCSI 等文件系统与磁碟介面的驱动程序等，放置在 /lib/modules/ 目录内</li>
+</ol>
+<h2 id="初始化进程"><a href="#初始化进程" class="headerlink" title="初始化进程"></a>初始化进程</h2><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
+<ul>
+<li><a href="http://cn.linux.vbird.org/linux_basic/0510osloader_1.php" target="_blank" rel="noopener">鸟哥的linux私房菜</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2013/02/booting.html" target="_blank" rel="noopener">计算机是如何启动的</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2013/08/linux_boot_process.html" target="_blank" rel="noopener">Linux 的启动流程</a></li>
 </ul>
 </blockquote>
 
@@ -407,19 +459,19 @@
     
 <nav id="article-nav">
     
-        <a href="../../电影下载/百度云满宽带下载/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="../../../启动流程/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    百度云满宽带下载
+                    启动流程
                 
             </div>
         </a>
     
     
-        <a href="../../刷机/redmi-4A刷刷机/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="../../../为我所用/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">redmi 4A刷机</div>
+            <div class="article-nav-title">Hello World</div>
         </a>
     
 </nav>

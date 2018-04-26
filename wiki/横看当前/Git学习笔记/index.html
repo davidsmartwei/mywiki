@@ -9,22 +9,22 @@
         <meta name="keywords" content="git" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Git简介Git是分布式版本控制系统，简单来说就是能记录每次文件的改动，如下图  优点 分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库 分支管理：可以在脱机环境下多人同时协作开发  版本控制创建版本库 新建一个空目录 12mkdir learngitcd learngit  初始化 1git init   编辑版本库添加文件到版本库 文件添加到暂存区 1git add">
+    <meta name="description" content="Git简介Git是分布式版本控制系统，简单来说就是能记录每次文件的改动，如下图  优点 分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库 分支管理：可以在脱机环境下多人同时协作开发">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习笔记">
 <meta property="og:url" content="http://www.less-is-more.top/wiki/横看当前/Git学习笔记/index.html">
 <meta property="og:site_name" content="David&#39;s Wiki">
-<meta property="og:description" content="Git简介Git是分布式版本控制系统，简单来说就是能记录每次文件的改动，如下图  优点 分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库 分支管理：可以在脱机环境下多人同时协作开发  版本控制创建版本库 新建一个空目录 12mkdir learngitcd learngit  初始化 1git init   编辑版本库添加文件到版本库 文件添加到暂存区 1git add">
+<meta property="og:description" content="Git简介Git是分布式版本控制系统，简单来说就是能记录每次文件的改动，如下图  优点 分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库 分支管理：可以在脱机环境下多人同时协作开发">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.less-is-more.top/images/git.png">
 <meta property="og:image" content="http://www.less-is-more.top/images/0.jpg">
 <meta property="og:image" content="http://www.less-is-more.top/images/master.png">
 <meta property="og:image" content="http://www.less-is-more.top/images/dev.png">
-<meta property="og:updated_time" content="2018-03-15T18:15:53.010Z">
+<meta property="og:updated_time" content="2018-04-26T03:07:08.140Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习笔记">
-<meta name="twitter:description" content="Git简介Git是分布式版本控制系统，简单来说就是能记录每次文件的改动，如下图  优点 分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库 分支管理：可以在脱机环境下多人同时协作开发  版本控制创建版本库 新建一个空目录 12mkdir learngitcd learngit  初始化 1git init   编辑版本库添加文件到版本库 文件添加到暂存区 1git add">
+<meta name="twitter:description" content="Git简介Git是分布式版本控制系统，简单来说就是能记录每次文件的改动，如下图  优点 分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库 分支管理：可以在脱机环境下多人同时协作开发">
 <meta name="twitter:image" content="http://www.less-is-more.top/images/git.png">
     
 
@@ -243,7 +243,7 @@
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="../电影下载/百度云满宽带下载/">百度云满宽带下载</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="../Docker入门/">Docker入门</a></li>  <li class="file"><a href="../windows-office激活/">windows-office激活</a></li>  <li class="file active"><a href="">Git学习笔记</a></li>  </ul> 
+                     <li class="file"><a href="../Docker入门/">Docker入门</a></li>  <li class="file active"><a href="">Git学习笔记</a></li>  <li class="file"><a href="../windows-office激活/">windows-office激活</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -252,7 +252,7 @@
                             &nbsp;
                             纵观古今
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../纵观古今/初始化进程/">初始化进程</a></li>  <li class="file"><a href="../../纵观古今/boot-计算机/">boot(计算机)</a></li>  <li class="file"><a href="../../纵观古今/docker-vs-虚拟机/">docker vs 虚拟机</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../../纵观古今/boot-计算机/">boot(计算机)</a></li>  <li class="file"><a href="../../纵观古今/docker-vs-虚拟机/">docker vs 虚拟机</a></li>  <li class="file"><a href="../../纵观古今/初始化进程/">初始化进程</a></li>  </ul> 
                     </li> 
                      </ul> 
     </div>
@@ -391,9 +391,10 @@
 <p><img src="/images/git.png" alt="git"></p>
 <h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
 <li>分布式版本控制：每个人的电脑上都是一个完整的版本库，不用依赖于中央服务器仓库</li>
-<li>分支管理：可以在脱机环境下多人同时协作开发</li>
+<li>分支管理：可以在脱机环境下多人同时协作开发<a id="more"></a>
+<h1 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h1></li>
 </ul>
-<h1 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ol>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ol>
 <li><p>新建一个空目录</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir learngit</span><br><span class="line"><span class="built_in">cd</span> learngit</span><br></pre></td></tr></table></figure>
 </li>

@@ -9,18 +9,18 @@
         <meta name="keywords" content="sysvinit,systemd" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="sysvinit内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程 初衷准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等 实现所有的init配置都在/etc/inittab文件当中 运行级别初衷操作系统启动时根据”运行级别”，确定要运行哪些程序及服务。依据有无网络与有无 X Wind">
+    <meta name="description" content="sysvinit内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程 初衷准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等">
 <meta name="keywords" content="sysvinit,systemd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初始化进程">
 <meta property="og:url" content="http://www.less-is-more.top/wiki/纵观古今/初始化进程/index.html">
 <meta property="og:site_name" content="David&#39;s Wiki">
-<meta property="og:description" content="sysvinit内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程 初衷准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等 实现所有的init配置都在/etc/inittab文件当中 运行级别初衷操作系统启动时根据”运行级别”，确定要运行哪些程序及服务。依据有无网络与有无 X Wind">
+<meta property="og:description" content="sysvinit内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程 初衷准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-19T02:47:52.352Z">
+<meta property="og:updated_time" content="2018-04-26T03:07:41.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初始化进程">
-<meta name="twitter:description" content="sysvinit内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程 初衷准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等 实现所有的init配置都在/etc/inittab文件当中 运行级别初衷操作系统启动时根据”运行级别”，确定要运行哪些程序及服务。依据有无网络与有无 X Wind">
+<meta name="twitter:description" content="sysvinit内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程 初衷准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等">
     
 
     
@@ -238,7 +238,7 @@
                         </a>
                          <ul class="unstyled" id="tree" >  <li class="file"><a href="../../横看当前/电影下载/百度云满宽带下载/">百度云满宽带下载</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="../../横看当前/Docker入门/">Docker入门</a></li>  <li class="file"><a href="../../横看当前/windows-office激活/">windows-office激活</a></li>  <li class="file"><a href="../../横看当前/Git学习笔记/">Git学习笔记</a></li>  </ul> 
+                     <li class="file"><a href="../../横看当前/Docker入门/">Docker入门</a></li>  <li class="file"><a href="../../横看当前/Git学习笔记/">Git学习笔记</a></li>  <li class="file"><a href="../../横看当前/windows-office激活/">windows-office激活</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory open">
@@ -247,7 +247,7 @@
                             &nbsp;
                             纵观古今
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file active"><a href="">初始化进程</a></li>  <li class="file"><a href="../boot-计算机/">boot(计算机)</a></li>  <li class="file"><a href="../docker-vs-虚拟机/">docker vs 虚拟机</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="../boot-计算机/">boot(计算机)</a></li>  <li class="file"><a href="../docker-vs-虚拟机/">docker vs 虚拟机</a></li>  <li class="file active"><a href="">初始化进程</a></li>  </ul> 
                     </li> 
                      </ul> 
     </div>
@@ -383,7 +383,7 @@
         
         
             <h1 id="sysvinit"><a href="#sysvinit" class="headerlink" title="sysvinit"></a>sysvinit</h1><p>内核文件加载以后，开始运行第一个程序 /sbin/init，进程编号（pid）就是1。其他所有进程都从它衍生，都是它的子进程</p>
-<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等</p>
+<h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><p>准备软件运行的环境，包括系统的主机名称、网络配置、语系处理、文件系统格式及其他服务的启动等<br><a id="more"></a></p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>所有的init配置都在/etc/inittab文件当中</p>
 <h3 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a>运行级别</h3><h4 id="初衷-1"><a href="#初衷-1" class="headerlink" title="初衷"></a>初衷</h4><p>操作系统启动时根据”运行级别”，确定要运行哪些程序及服务。依据有无网络与有无 X Window 而将 run level 分为 7 个等级</p>
 <ul>
